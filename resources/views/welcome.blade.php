@@ -9,7 +9,7 @@
     @vite('resources/js/app.js')
     @vite('resources/css/app.css')
 </head>
-<body>
+<body style="height: 100%;">
     
     <div id="root"></div>
 </body>

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Sales;
+use App\Models\Roles;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class SalesController extends Controller
+class RolesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class SalesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Sales $sales)
+    public function show(Roles $roles)
     {
         //
     }
@@ -42,7 +43,7 @@ class SalesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sales $sales)
+    public function edit(Roles $roles)
     {
         //
     }
@@ -50,7 +51,7 @@ class SalesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Sales $sales)
+    public function update(Request $request, Roles $roles)
     {
         //
     }
@@ -58,7 +59,7 @@ class SalesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sales $sales)
+    public function destroy(Roles $roles)
     {
         //
     }

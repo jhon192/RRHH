@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Departments;
+use App\Models\Categories;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class DepartmentsController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +35,7 @@ class DepartmentsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Departments $departments)
+    public function show(Categories $categories)
     {
         //
     }
@@ -42,7 +43,7 @@ class DepartmentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Departments $departments)
+    public function edit(Categories $categories)
     {
         //
     }
@@ -50,7 +51,7 @@ class DepartmentsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Departments $departments)
+    public function update(Request $request, Categories $categories)
     {
         //
     }
@@ -58,7 +59,7 @@ class DepartmentsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Departments $departments)
+    public function destroy(Categories $categories)
     {
         //
     }
