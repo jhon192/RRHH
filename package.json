@@ -21,11 +21,13 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@reduxjs/toolkit": "^2.2.1",
         "flowbite": "^2.0.0",
         "flowbite-react": "^0.6.4",
         "localforage": "^1.10.0",
         "match-sorter": "^6.3.1",
         "react-icons": "^4.11.0",
+        "react-redux": "^9.1.0",
         "react-router-dom": "^6.18.0",
         "sort-by": "^0.0.2"
     }

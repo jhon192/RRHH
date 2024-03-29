@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 export default function Login() {
 	const { setUser, csrfToken } = useAuth();
-	const [error, setError] = React.useState(null);
+	const [errors, setErrors] = React.useState(null);
 
 	// login user
 	const handleSubmit = async (e) => {
@@ -23,8 +23,8 @@ export default function Login() {
 				return <Navigate to="/profile" />;
 			}
 		} catch (error) {
-			if (error.response.status === 401) {
-				setError(error.response.data.message);
+			if (error.response.status.toString().charAt(0) === '4') {
+				setErrors(error.response.data.message);
 			}
 		}
 	};
@@ -37,9 +37,9 @@ export default function Login() {
 						<h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
 							Sign in to your account
 						</h1>
-						{error && (
+						{errors && (
 							<div
-								className="flex p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
+								className="flex p-4 mb-4 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:bg-red-500 dark:text-white dark:border-red-800"
 								role="alert">
 								<svg
 									aria-hidden="true"
@@ -53,7 +53,7 @@ export default function Login() {
 										clipRule="evenodd"></path>
 								</svg>
 								<span className="sr-only">Info</span>
-								<div>{error}</div>
+								<div>{errors}</div>
 							</div>
 						)}
 
@@ -95,7 +95,7 @@ export default function Login() {
 
 							<button
 								type="submit"
-								className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+								className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
 								Sign in
 							</button>
 							<p className="text-sm font-light text-gray-500 dark:text-gray-400">

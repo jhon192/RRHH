@@ -1,9 +1,9 @@
-import Example from "../components/Example";
+import About from "../Pages/About";
 import Login from "../Pages/Login";
 import NotFound from "../Pages/NotFound";
-import Register from "../Pages/Register";
-import About from "../Pages/About";
 import Profile from "../Pages/Profile";
+import Register from "../Pages/Register";
+import UsersIndex from "../Pages/Users/Index";
 import GuestLayout from "../components/GuestLayout";
 import ProtectedLayout from "../components/ProtectedLayout";
 
@@ -35,12 +35,16 @@ const routes = [
 				path: '/profile',
 				element: <Profile />,
 			},
+			{
+				path: '/users',
+				element: <UsersIndex />
+			}
 		],
 	},
-    {
-        path: '*',
-        element: <NotFound />,
-    },
+	{
+		path: '*',
+		element: <NotFound />,
+	},
 ]
 
 export default routes
